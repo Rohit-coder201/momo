@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Delights - Food Menu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .intro-container, .special-container, .menu-container, .order-form {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 95%;
+            max-width: 900px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .intro-container h1, .special-container h2, .menu-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .intro-container p, .special-container p {
+            font-size: 1.1rem;
+            color: #bbb;
+        }
+        .menu-container {
+            padding: 40px;
+        }
+        .menu-container h2 {
+            font-size: 2rem;
+        }
+        .menu-item {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .menu-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .menu-item:hover {
+            background-color: #3a3a3a;
+        }
+        .menu-item-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .menu-item-price {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-top: 8px;
+        }
+        .menu-item-description {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 5px;
+        }
+        .order-form input, .order-form select, .order-form textarea, .order-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+        .order-form button {
+            background-color: #3a3a3a;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .order-form button:hover {
+            background-color: #4a4a4a;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <h1>Welcome to Ocean Delights</h1>
+        <p>At Ocean Delights, we bring the freshest catch from the sea straight to your table. Our menu is crafted to showcase a variety of seafood dishes that celebrate the rich flavors of the ocean. Dive in and enjoy!</p>
+    </div>
+
+    <div class="special-container">
+        <h2>Today's Special</h2>
+    </div>
+
+    <div class="menu-container">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <img src="https://www.sanraku.com/wp-content/uploads/2023/11/What-is-a-Sashimi-Platter-2000x1200.jpg" alt="Sashimi Platter">
+            <span class="menu-item-name">Sashimi Platter</span>
+            <div class="menu-item-description">A beautifully arranged assortment of fresh raw fish, perfect for seafood lovers.</div>
+            <div class="menu-item-price">$35.00</div>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.thecookierookie.com/wp-content/uploads/2023/05/grilled-salmon-recipe-2.jpg" alt="Grilled Salmon">
+            <span class="menu-item-name">Grilled Salmon</span>
+            <div class="menu-item-description">Succulent, perfectly grilled salmon with a hint of lemon and herbs.</div>
+            <div class="menu-item-price">$18.00</div>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.kikkoman.eu/fileadmin/user_upload/Recipes/Bilder_EU/1025-recipe-page-Spicy-tuna-and-salmon-rolls_desktop.jpg" alt="Spicy Tuna Roll">
+            <span class="menu-item-name">Spicy Tuna Roll</span>
+            <div class="menu-item-description">A spicy twist on a classic sushi roll, featuring fresh tuna and a kick of heat.</div>
+            <div class="menu-item-price">$12.00</div>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.gimmesomeoven.com/wp-content/uploads/2016/01/Miso-Soup-Recipe-9.jpg" alt="Miso Soup">
+            <span class="menu-item-name">Miso Soup</span>
+            <div class="menu-item-description">A warm and comforting broth with tofu, seaweed, and miso paste.</div>
+            <div class="menu-item-price">$5.00</div>
+        </div>
+        <div class="menu-item">
+            <img src="https://www.thespruceeats.com/thmb/CkzlxmRyeK8IUrMrHrbq73RX4g4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg" alt="Tempura">
+            <span class="menu-item-name">Tempura</span>
+            <div class="menu-item-description">Lightly battered and fried seafood and vegetables, crispy and delicious.</div>
+            <div class="menu-item-price">$14.00</div>
+        </div>
+    </div>
+
+    <div class="order-form">
+        <h2>Order Now</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <select name="dish" required>
+                <option value="" disabled selected>Select a dish</option>
+                <option value="sashimi">Sashimi Platter</option>
+                <option value="salmon">Grilled Salmon</option>
+                <option value="tuna">Spicy Tuna Roll</option>
+                <option value="miso">Miso Soup</option>
+                <option value="tempura">Tempura</option>
+            </select>
+            <input type="number" name="quantity" placeholder="Quantity" min="1" required>
+            <textarea name="address" placeholder="Delivery Address" rows="3" required></textarea>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>
